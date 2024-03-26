@@ -1,0 +1,24 @@
+void main() 
+{  
+  //1,1,2,3,5,8,13,21....  
+  int cont=1;
+  int termo=10;
+  int ant=0;
+  int seq=1;
+  
+  do
+  {
+    if(cont==1)
+    {
+      print(1);
+    }
+    else
+    {
+        seq=seq+ant;
+        print(seq);
+        ant=seq-ant;
+    }
+        
+    cont++;
+  }while(cont<=termo);  
+}
