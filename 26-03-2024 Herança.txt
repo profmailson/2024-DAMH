@@ -1,0 +1,52 @@
+class Pessoa
+{
+  //atributos
+  String nome="";
+  String _email="";
+  int idade=0;
+  
+  //Construtores
+  Pessoa(this.nome,this._email);
+  
+  //Encapsulamento
+  String get emailProf
+  {
+    return _email;
+  }
+  
+  set emailProf(String novoEmail)
+  {
+    _email = novoEmail;
+  }
+  
+  //métodos
+  String retornaEmail()
+  {
+    return "O email cadastrado e $_email";
+  }
+  
+  void mostra(String comida)
+  {
+    print("A comida preferida do(a) $nome, e $comida"); 
+  }  
+}
+
+class Aluno extends Pessoa
+{
+  int ra;
+  
+  Aluno(int this.ra, String nome, String email): super(nome, email);
+  
+  calculaMedia(double n1, double n2, double n3)
+  {
+    print("Media do aluno " + ((n1+n2+n3)/3).toString());
+  }  
+}
+
+void main() 
+{  
+    Aluno al1 = Aluno(1234, "Jose da Silva", "JS@uni9.br");
+    
+    print(al1.retornaEmail());
+    al1.calculaMedia(8,7,9);
+}
