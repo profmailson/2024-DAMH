@@ -1,0 +1,32 @@
+class Pessoa
+{
+  //atributos
+  String nome="";
+  String email="";
+  int idade=0;
+  
+  //Construtores
+  Pessoa(this.nome,this.email);
+  
+  //métodos
+  String retornaEmail()
+  {
+    return "O email cadastrado e $email";
+  }
+  
+  void mostra(String comida)
+  {
+    print("A comida preferida do(a) $nome, e $comida"); 
+  }  
+}
+
+void main() 
+{  
+  Pessoa p1 = Pessoa("Mailson","mailson.silva@uni9.pro.br");
+  
+  print(p1.nome);
+  print(p1.email);
+  
+  print(p1.retornaEmail());
+  p1.mostra("Pizza");
+}
