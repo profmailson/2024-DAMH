@@ -1,0 +1,34 @@
+class Animal
+{
+  //Atributos
+  String nome='';
+  int idade=0;
+    
+}
+
+class Cachorro extends Animal
+{
+   //Atributo
+   String raca='';
+  
+   //Construtor
+   Cachorro (this.raca);
+  
+   //Metodo
+   void som()
+   {
+     print('Au Au Au!');
+   }
+}
+
+void main() 
+{
+   Cachorro c = Cachorro('Pastor-Alemão');
+   
+   c.nome = 'Dog';
+   c.idade=10; 
+   c.som();
+  
+   print("Nome do animal " + c.nome);
+   print("Idade do animal " + c.idade.toString());  
+}
