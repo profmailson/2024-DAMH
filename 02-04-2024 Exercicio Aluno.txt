@@ -1,0 +1,46 @@
+class Aluno
+{
+  //Atributos
+  String nome="";
+  int ra=0;
+  double av1=0;
+  double av2=0;
+  
+  //Construtor
+  Aluno(this.nome, this.ra);
+  
+  void recebeNota(double notaAv1, double notaAv2)
+  {
+     av1 = notaAv1;
+     av2 = notaAv2;     
+  }
+  
+  double calculaMedia()
+  {
+    return (av1+av2)/2;
+  }
+  
+  String situacao()
+  {
+       if(calculaMedia()>=7)
+       {
+         return "Aluno Aprovado";
+       }
+       else
+       {
+         return "Aluno Reprovado";
+       }         
+  }
+  
+}
+
+
+void main() 
+{
+    Aluno al = Aluno('João Jose',123456);
+    
+    al.recebeNota(7,9);
+    print(al.situacao());  
+    print("Media do Aluno " + al.calculaMedia().toString());
+    print("Nome do Aluno " + al.nome);  
+}
