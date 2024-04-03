@@ -1,0 +1,80 @@
+class Veiculo
+{
+    //Atributo
+    String _marca;
+    //Construtor
+    Veiculo(this._marca);
+    //Método
+    String getMarca()
+    {
+      return _marca;
+    }
+}
+
+class Carro extends Veiculo
+{
+    //Atributos
+    String _modelo;
+    double _velocidade;
+    //Construtor
+    Carro (this._modelo, this._velocidade, String marca): super(marca);
+    
+    //Métodos
+    String getModelo()
+    {
+      return _modelo;
+    }
+  
+    double getvelocidade()
+    {
+      return _velocidade;
+    }
+    
+    void acelerar(double quantidade)
+    {
+      _velocidade+=quantidade;
+      
+      if (_velocidade>200)
+      {
+         _velocidade=200;
+      }
+    }
+  
+    void frear(double quantidade)
+    {
+      _velocidade-=quantidade;
+      
+      if (_velocidade<0)
+      {
+         _velocidade=0;
+      }
+    }
+}
+
+
+void main() 
+{
+    Carro car = Carro('Roma',0,'Ferrari');
+  
+    print(car._marca);  
+    print(car._modelo);
+  
+    car.acelerar(100);
+    print(car.getvelocidade().toString());
+  
+    car.acelerar(80);  
+    print(car.getvelocidade().toString());
+  
+    car.frear(20);
+    print(car.getvelocidade().toString());  
+  
+    car.acelerar(80);  
+    print(car.getvelocidade().toString());  
+  
+    car.frear(190);  
+    print(car.getvelocidade().toString());  
+  
+    car.frear(20);  
+    print(car.getvelocidade().toString());
+  
+}
