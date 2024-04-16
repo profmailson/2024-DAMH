@@ -1,0 +1,31 @@
+EX 01
+
+void main() 
+{
+
+  print("Resultado da soma " + soma(50,40).toString());
+
+}
+
+int soma(int n1, int n2) => (n1+n2);
+
+EX 02
+
+void main() 
+{
+
+  print("IMC = " + imc(85, 1.82).toString());
+
+}
+
+double imc (double peso, double altura) => (peso/(altura*altura));
+
+EX 03
+void main() 
+{
+
+  print("Valor em USD " + converte(100).toString());
+
+}
+
+double converte(double real) => (real/5.23);
