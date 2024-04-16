@@ -1,0 +1,27 @@
+void main() 
+{
+  List<String> alunos = ["Jose", "Maria", "Ana", "Fernando", "Marcos"];
+  
+  int i=0;
+  
+  //Mostra o primeiro elemento/item da lista
+  print(alunos[0]);
+  
+  //Adiciona mais um item na lista
+  alunos.add("Gustavo");
+  
+  //Mostra a lista completa
+  print(alunos);
+     
+  //Busca na nossa lista
+  print(alunos.contains("Ana"));
+  
+  print(alunos.length);
+  
+  //Adiciona mais um item na lista
+  alunos.add("Matheus");  
+  
+  //Mostra a lista completa usando for
+  for(i=0; i<alunos.length; i++)
+    print(alunos[i]);  
+}
