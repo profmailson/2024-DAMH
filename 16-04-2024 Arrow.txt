@@ -1,0 +1,15 @@
+void main() 
+{
+
+  print("O dobro de 5 é"+calc(5).toString());
+  
+  print(maior1(15,72));
+  
+  print(maior(18,16));  
+}
+
+int calc(int x) => (x*2);
+
+String maior1 (int a, int b) => (a>b?"Primero numero maior":"Segundo numero maior");
+
+int maior (int a, int b) => (a>b?a:b);
