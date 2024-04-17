@@ -1,0 +1,68 @@
+EX 01
+void main() {
+
+  List <int> num =[10,7,20,18,12,5,9];
+  
+  int soma=0,i=0;
+  double media;
+  
+  for(i=0; i<num.length;i++)
+    soma+=num[i];
+  
+  media=soma/num.length;
+  
+  print(media);
+}
+
+EX02
+
+void main() {
+  
+  List <int> num =[10,23,12,10,14,12,10,80,23,23];
+  List <int> num2 = [];
+  
+  int i=0, j=0, qtd=0;
+  
+  for(i=0; i<num.length; i++)
+  {
+    qtd=0;
+            
+    for(j=0; j<num.length; j++)
+    {
+      if (num[i] == num[j])
+      {
+        qtd++;
+      }
+    }
+    
+    if(num2.contains(num[i])==false)
+    {
+      print(num[i].toString() + " = " + qtd.toString());
+      num2.add(num[i]);
+    }
+  }
+}
+
+EX03
+void main() {
+  
+  List <String> nomes =["Maria", "Mailson", "Ricardos","Jose", "Ronaldo"];
+  
+  int i=0, qtd=0;
+  
+  for(i=0; i<nomes.length; i++)
+  {
+    if (nomes[i].length > qtd)
+    {
+      qtd = nomes[i].length;
+    }
+  }
+  
+  for(i=0; i<nomes.length; i++)
+  {
+    if(nomes[i].length == qtd)
+    {
+      print(nomes[i]);
+    }
+  }  
+}
