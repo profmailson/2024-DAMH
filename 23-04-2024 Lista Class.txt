@@ -1,0 +1,33 @@
+class Aluno
+{
+  //Atributos
+  int ra;
+  String nome;
+  
+  //Construtor
+  Aluno(this.ra, this.nome);
+}
+
+void main() 
+{
+  List <Aluno> dadosAluno=[];
+  
+  dadosAluno.add(Aluno(987,"Fernando da Silva"));
+  dadosAluno.add(Aluno(568, "Maria Aparecida"));
+  dadosAluno.add(Aluno(698, "Luiz"));
+  dadosAluno.add(Aluno(852, "Mauricio"));
+    
+  for (Aluno dados in dadosAluno)
+  {
+    print(dados.ra);
+    print(dados.nome);
+  }
+    
+  /*int i=0;
+  for(i=0; i<3; i++)
+  {
+    print(dadosAluno[i].ra);
+    print(dadosAluno[i].nome);
+  }*/
+    
+}
