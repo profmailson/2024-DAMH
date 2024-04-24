@@ -1,0 +1,38 @@
+class Aluno
+{
+  //Atributos 
+  String nome;
+  double nota;
+  
+  //Construtor
+  Aluno(this.nome, this.nota);
+}
+
+void main() {
+  
+  List<Aluno> alunos = []; 
+  double soma=0, media=0;
+  //Adicionando os elementos na nossa lista
+  alunos.add(Aluno("Douglas",9));
+  alunos.add(Aluno("Marcelo",7.5));
+  alunos.add(Aluno("Ronaldo",6));
+  alunos.add(Aluno("Luiz",5));
+  alunos.add(Aluno("Luiza",10));
+  //For percorrendo a nossa lista para somar as notas
+  for(Aluno al in alunos)
+  {
+    soma+=al.nota; //soma = soma + al.nota;
+  }
+  //Calculando a media
+  media=soma/5;
+  //Mostrando a media
+  print("Média dos alunos $media");
+  //Percorrendo a lista para mostrar os alunos com nota acima da media
+  for(Aluno al in alunos)
+  {
+    if(al.nota >=media)
+    {
+      print("Nome: ${al.nome} Nota: ${al.nota}");
+    }
+  }  
+}

@@ -1,0 +1,31 @@
+class Produto
+{
+  //Atributos
+  String nomeProduto;
+  double preco;
+  int qtdEstoque;
+  
+  //Construtor
+  Produto(this.nomeProduto, this.preco, this.qtdEstoque);
+}
+
+void main() {
+  
+  List<Produto> prod=[];
+  double totalEstoque=0;
+  
+  prod.add(Produto("Mouse",30,100));
+  prod.add(Produto("Teclado",80,150));
+  prod.add(Produto("Monitor",1200,35));
+  prod.add(Produto("Notebook",4500,20));
+  prod.add(Produto("Fone",45,18));
+  
+  for(Produto pd in prod)
+  {
+    print("Produto: ${pd.nomeProduto} Preco: ${pd.preco} Qtd.Est. ${pd.qtdEstoque}");
+    totalEstoque+=(pd.preco*pd.qtdEstoque);
+  }
+  
+  print("");
+  print("Valor total em estoque: $totalEstoque");
+}
