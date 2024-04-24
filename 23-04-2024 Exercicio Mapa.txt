@@ -1,0 +1,46 @@
+class Contato
+{
+  //Atributos
+  String nome;
+  String telefone;
+  
+  //Construtor
+  Contato(this.nome, this.telefone);
+}
+
+void main() 
+{
+
+  Map<String, Contato> agenda = Map();
+  
+  agenda["RONALDO"]=Contato("RONALDO DA LUZ","999998888");
+  agenda["LUCAS"]=Contato("LUCAS LUIZ", "988889999");
+  agenda["MAILSON"]=Contato("MAILSON ROCHA", "977775555");
+  
+  agenda.forEach((k, a) => print("CHAVE: ${k} - NOME: ${a.nome}, TELEFONE: ${a.telefone}")); 
+  
+  verifica(agenda,"LUCAS");
+  
+  agenda.remove("LUCAS");
+  
+  verifica(agenda,"LUCAS");
+  verifica(agenda,"JESSICA");
+  verifica(agenda,"MAILSON");
+  
+  agenda["JESSICA"]=Contato("JESSICA DA SILVA", "933334444");
+  verifica(agenda,"JESSICA");
+}
+
+void verifica(Map<String, Contato> agenda,String chave)
+{
+  if(agenda.containsKey(chave)==true)
+  {
+    print("\n$chave faz parte da lista");
+    
+    agenda.forEach((k, a) => k==chave? print("NOME: ${a.nome}, TELEFONE: ${a.telefone}") : "" );   
+  }
+  else
+  {
+    print("\n$chave não faz parte da lista");
+  }
+}
