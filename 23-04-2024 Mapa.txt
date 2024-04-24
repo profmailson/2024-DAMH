@@ -1,0 +1,26 @@
+class DadosVeiculo
+{
+  //Atributos
+  String fabricante;
+  String modelo;
+  int ano;
+  
+  //Construtor
+  DadosVeiculo(this.fabricante, this.modelo, this.ano);
+}
+
+void main() 
+{
+
+  Map<String, DadosVeiculo> carros = Map();
+  
+  carros["ABC-1234"]=DadosVeiculo("Ferrari","F-250",2021);
+  carros["ABC-4321"]=DadosVeiculo("Bugatti", "Veyron", 2022);
+  carros["XYZ-2539"]=DadosVeiculo("Fiat", "F147", 1975);
+  
+  carros.forEach((k, v) => print("Placa: ${k} ${v.fabricante}, ${v.modelo}, ${v.ano}")); 
+  
+  print(carros.containsKey("ABC-4321"));
+  carros.remove("ABC-4321");
+  print(carros.containsKey("ABC-4321"));  
+}
